@@ -1,0 +1,15 @@
+{
+  "values": [
+    "#material:oak",
+    "#material:spruce",
+    "#material:birch",
+    "#material:acacia",
+    "#material:cherry",
+    "#material:jungle",
+    "#material:dark_oak",
+    "#material:crimson",
+    "#material:warped",
+    "#material:mangrove",
+    "#material:bamboo"
+  ]
+}

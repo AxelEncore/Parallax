@@ -1,0 +1,24 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.moulberry.lattice.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "v1201.GuiEventListenerMixins$MixinLatticeConfigScreen",
+    "v1201.GuiEventListenerMixins$MixinAbstractWidgets",
+    "v1201.GuiEventListenerMixins$MixinDropdownWidget",
+    "v1201.GuiEventListenerMixins$MixinEditableSlider",
+    "v1201.multiversion.MixinDrawString",
+    "v1201.multiversion.MixinNewCycleButton",
+    "v1201.multiversion.MixinNewMultiLineEditBox",
+    "v1201.multiversion.MixinOffsetZ",
+    "v1201.multiversion.MixinGetWindowHandle",
+    "v1202.MixinLatticeConfigScreen",
+    "v1202.MixinWidgetWithText",
+    "v1202.multiversion.MixinMouseScrolled",
+    "v1206.MixinDropdownWidget"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

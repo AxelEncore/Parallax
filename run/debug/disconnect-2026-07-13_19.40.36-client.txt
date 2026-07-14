@@ -1,0 +1,181 @@
+---- Minecraft Network Protocol Error Report ----
+// 404
+
+Time: 2026-07-13 19:40:36
+Description: Packet handling error
+
+java.lang.NullPointerException: Packet handling error
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233) ~[?:?] {re:mixin}
+	at TRANSFORMER/neoforge@21.1.220/net.neoforged.neoforge.network.PacketDistributor.sendToServer(PacketDistributor.java:40) ~[neoforge-21.1.220.jar%23190!/:?] {re:classloading}
+	at TRANSFORMER/axiom@5.4.2/com.moulberry.axiom.network.AxiomNetworking.sendToServer(AxiomNetworking.java:79) ~[%23191!/:?] {re:classloading}
+	at TRANSFORMER/axiom@5.4.2/com.moulberry.axiom.packets.AxiomServerboundPacket.send(AxiomServerboundPacket.java:25) ~[%23191!/:?] {re:classloading}
+	at TRANSFORMER/axiom@5.4.2/com.moulberry.axiom.integration.ServerIntegration.sendChangeGameModeImmediately(ServerIntegration.java:102) ~[%23191!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/axiom@5.4.2/com.moulberry.axiom.ClientEvents.beforeDisconnect(ClientEvents.java:207) ~[%23191!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.network.Connection.handler$zbe000$axiom$beforeDisconnect(Connection.java:759) ~[neoforge-21.1.220.jar%23189!/:?] {re:mixin,re:classloading,pl:mixin:APP:axiom.mixins.json:MixinConnection from mod axiom,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.network.Connection.disconnect(Connection.java) ~[neoforge-21.1.220.jar%23189!/:?] {re:mixin,re:classloading,pl:mixin:APP:axiom.mixins.json:MixinConnection from mod axiom,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.network.Connection.disconnect(Connection.java:452) ~[neoforge-21.1.220.jar%23189!/:?] {re:mixin,re:classloading,pl:mixin:APP:axiom.mixins.json:MixinConnection from mod axiom,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.multiplayer.ClientCommonPacketListenerImpl.handleDisconnect(ClientCommonPacketListenerImpl.java:303) ~[neoforge-21.1.220.jar%23189!/:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.network.protocol.common.ClientboundDisconnectPacket.handle(ClientboundDisconnectPacket.java:20) ~[neoforge-21.1.220.jar%23189!/:?] {re:computing_frames,re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.network.protocol.common.ClientboundDisconnectPacket.handle(ClientboundDisconnectPacket.java:10) ~[neoforge-21.1.220.jar%23189!/:?] {re:computing_frames,re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.network.Connection.genericsFtw(Connection.java:207) ~[neoforge-21.1.220.jar%23189!/:?] {re:mixin,re:classloading,pl:mixin:APP:axiom.mixins.json:MixinConnection from mod axiom,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.network.Connection.channelRead0(Connection.java:191) ~[neoforge-21.1.220.jar%23189!/:?] {re:mixin,re:classloading,pl:mixin:APP:axiom.mixins.json:MixinConnection from mod axiom,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.network.Connection.channelRead0(Connection.java:70) ~[neoforge-21.1.220.jar%23189!/:?] {re:mixin,re:classloading,pl:mixin:APP:axiom.mixins.json:MixinConnection from mod axiom,pl:mixin:A}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:99) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {re:mixin,re:computing_frames}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.codec@4.1.97.Final/io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103) ~[netty-codec-4.1.97.Final.jar%23130!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.codec@4.1.97.Final/io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.97.Final.jar%23130!/:4.1.97.Final] {re:computing_frames}
+	at MC-BOOTSTRAP/io.netty.codec@4.1.97.Final/io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) ~[netty-codec-4.1.97.Final.jar%23130!/:4.1.97.Final] {re:computing_frames}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.handler@4.1.97.Final/io.netty.handler.flow.FlowControlHandler.dequeue(FlowControlHandler.java:202) ~[netty-handler-4.1.97.Final.jar%23132!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.handler@4.1.97.Final/io.netty.handler.flow.FlowControlHandler.channelRead(FlowControlHandler.java:164) ~[netty-handler-4.1.97.Final.jar%23132!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.local.LocalChannel.readInbound(LocalChannel.java:299) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.local.LocalChannel.finishPeerRead0(LocalChannel.java:445) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.local.LocalChannel.access$400(LocalChannel.java:50) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.local.LocalChannel$5.run(LocalChannel.java:403) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.common@4.1.97.Final/io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174) ~[netty-common-4.1.97.Final.jar%23131!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.DefaultEventLoop.run(DefaultEventLoop.java:54) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.common@4.1.97.Final/io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.97.Final.jar%23131!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.common@4.1.97.Final/io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.97.Final.jar%23131!/:4.1.97.Final] {}
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Netty Local Client IO #0
+Stacktrace:
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233) ~[?:?] {re:mixin}
+	at TRANSFORMER/neoforge@21.1.220/net.neoforged.neoforge.network.PacketDistributor.sendToServer(PacketDistributor.java:40) ~[neoforge-21.1.220.jar%23190!/:?] {re:classloading}
+	at TRANSFORMER/axiom@5.4.2/com.moulberry.axiom.network.AxiomNetworking.sendToServer(AxiomNetworking.java:79) ~[%23191!/:?] {re:classloading}
+	at TRANSFORMER/axiom@5.4.2/com.moulberry.axiom.packets.AxiomServerboundPacket.send(AxiomServerboundPacket.java:25) ~[%23191!/:?] {re:classloading}
+	at TRANSFORMER/axiom@5.4.2/com.moulberry.axiom.integration.ServerIntegration.sendChangeGameModeImmediately(ServerIntegration.java:102) ~[%23191!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/axiom@5.4.2/com.moulberry.axiom.ClientEvents.beforeDisconnect(ClientEvents.java:207) ~[%23191!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.network.Connection.handler$zbe000$axiom$beforeDisconnect(Connection.java:759) ~[neoforge-21.1.220.jar%23189!/:?] {re:mixin,re:classloading,pl:mixin:APP:axiom.mixins.json:MixinConnection from mod axiom,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.network.Connection.disconnect(Connection.java) ~[neoforge-21.1.220.jar%23189!/:?] {re:mixin,re:classloading,pl:mixin:APP:axiom.mixins.json:MixinConnection from mod axiom,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.network.Connection.disconnect(Connection.java:452) ~[neoforge-21.1.220.jar%23189!/:?] {re:mixin,re:classloading,pl:mixin:APP:axiom.mixins.json:MixinConnection from mod axiom,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.multiplayer.ClientCommonPacketListenerImpl.handleDisconnect(ClientCommonPacketListenerImpl.java:303) ~[neoforge-21.1.220.jar%23189!/:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:runtimedistcleaner:A}
+-- Connection --
+Details:
+	Protocol: play
+	Flow: CLIENTBOUND
+	Server type: <none>
+	Server brand: neoforge
+Stacktrace:
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.network.PacketListener.fillCrashReport(PacketListener.java:33) ~[neoforge-21.1.220.jar%23189!/:?] {re:classloading,re:mixin}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.network.protocol.PacketUtils.fillCrashReport(PacketUtils.java:61) ~[neoforge-21.1.220.jar%23189!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.multiplayer.ClientCommonPacketListenerImpl.storeDisconnectionReport(ClientCommonPacketListenerImpl.java:130) ~[neoforge-21.1.220.jar%23189!/:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.multiplayer.ClientCommonPacketListenerImpl.createDisconnectionInfo(ClientCommonPacketListenerImpl.java:123) ~[neoforge-21.1.220.jar%23189!/:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.network.Connection.exceptionCaught(Connection.java:157) ~[neoforge-21.1.220.jar%23189!/:?] {re:mixin,re:classloading,pl:mixin:APP:axiom.mixins.json:MixinConnection from mod axiom,pl:mixin:A}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:346) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:447) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.codec@4.1.97.Final/io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103) ~[netty-codec-4.1.97.Final.jar%23130!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.codec@4.1.97.Final/io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.97.Final.jar%23130!/:4.1.97.Final] {re:computing_frames}
+	at MC-BOOTSTRAP/io.netty.codec@4.1.97.Final/io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) ~[netty-codec-4.1.97.Final.jar%23130!/:4.1.97.Final] {re:computing_frames}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.handler@4.1.97.Final/io.netty.handler.flow.FlowControlHandler.dequeue(FlowControlHandler.java:202) ~[netty-handler-4.1.97.Final.jar%23132!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.handler@4.1.97.Final/io.netty.handler.flow.FlowControlHandler.channelRead(FlowControlHandler.java:164) ~[netty-handler-4.1.97.Final.jar%23132!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.local.LocalChannel.readInbound(LocalChannel.java:299) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.local.LocalChannel.finishPeerRead0(LocalChannel.java:445) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.local.LocalChannel.access$400(LocalChannel.java:50) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.local.LocalChannel$5.run(LocalChannel.java:403) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.common@4.1.97.Final/io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174) ~[netty-common-4.1.97.Final.jar%23131!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.transport@4.1.97.Final/io.netty.channel.DefaultEventLoop.run(DefaultEventLoop.java:54) ~[netty-transport-4.1.97.Final.jar%23136!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.common@4.1.97.Final/io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.97.Final.jar%23131!/:4.1.97.Final] {}
+	at MC-BOOTSTRAP/io.netty.common@4.1.97.Final/io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.97.Final.jar%23131!/:4.1.97.Final] {}
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.1
+	Minecraft Version ID: 1.21.1
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 21.0.11, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 1472932408 bytes (1404 MiB) / 2084569088 bytes (1988 MiB) up to 8573157376 bytes (8176 MiB)
+	CPUs: 12
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD Ryzen 5 5600X 6-Core Processor             
+	Identifier: AuthenticAMD Family 25 Model 33 Stepping 2
+	Microarchitecture: Zen 3
+	Frequency (GHz): 3.69
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 12
+	Graphics card #0 name: NVIDIA GeForce RTX 3070
+	Graphics card #0 vendor: NVIDIA
+	Graphics card #0 VRAM (MiB): 8192.00
+	Graphics card #0 deviceId: VideoController1
+	Graphics card #0 versionInfo: 32.0.16.1047
+	Memory slot #0 capacity (MiB): 8192.00
+	Memory slot #0 clockSpeed (GHz): 2.67
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MiB): 8192.00
+	Memory slot #1 clockSpeed (GHz): 2.67
+	Memory slot #1 type: DDR4
+	Memory slot #2 capacity (MiB): 8192.00
+	Memory slot #2 clockSpeed (GHz): 2.67
+	Memory slot #2 type: DDR4
+	Memory slot #3 capacity (MiB): 8192.00
+	Memory slot #3 clockSpeed (GHz): 2.67
+	Memory slot #3 type: DDR4
+	Virtual memory max (MiB): 49190.64
+	Virtual memory used (MiB): 47770.44
+	Swap memory total (MiB): 16499.97
+	Swap memory used (MiB): 2385.46
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 4554.30, total: 243283.00
+	Space in storage for workdir (MiB): available: 292301.75, total: 953853.00
+	JVM Flags: 0 total; 
+	ModLauncher: 11.0.5+main.901c6ea8
+	ModLauncher launch target: forgeclientdev
+	ModLauncher services: 
+		sponge-mixin-0.15.2+mixin.0.8.7.jar mixin PLUGINSERVICE 
+		loader-4.0.42.jar slf4jfixer PLUGINSERVICE 
+		loader-4.0.42.jar runtime_enum_extender PLUGINSERVICE 
+		at-modlauncher-10.0.1.jar accesstransformer PLUGINSERVICE 
+		loader-4.0.42.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-11.0.5.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-11.0.5.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		javafml@4.0
+		lowcodefml@4.0
+		minecraft@4.0
+	Mod List: 
+		main                                              |Axiom                         |axiom                         |5.4.2               |Manifest: NOSIGNATURE
+		neoforge-21.1.220.jar                             |Minecraft                     |minecraft                     |1.21.1              |Manifest: NOSIGNATURE
+		neoforge-21.1.220.jar                             |NeoForge                      |neoforge                      |21.1.220            |Manifest: NOSIGNATURE
+	Crash Report UUID: dbb998ca-7ba3-415e-958a-f902faad5763
+	FML: 4.0.42
+	NeoForge: 21.1.220

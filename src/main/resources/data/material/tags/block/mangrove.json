@@ -1,0 +1,23 @@
+{
+  "values": [
+    "minecraft:mangrove_planks",
+    "minecraft:mangrove_roots",
+    "minecraft:muddy_mangrove_roots",
+    "minecraft:mangrove_pressure_plate",
+    "minecraft:mangrove_trapdoor",
+    "minecraft:mangrove_stairs",
+    "minecraft:mangrove_slab",
+    "minecraft:mangrove_fence",
+    "minecraft:mangrove_door",
+    "minecraft:mangrove_fence_gate",
+    "minecraft:mangrove_button",
+    "minecraft:mangrove_sign",
+    "minecraft:mangrove_wall_sign",
+    "minecraft:mangrove_hanging_sign",
+    "minecraft:mangrove_wall_hanging_sign",
+    "minecraft:mangrove_log",
+    "minecraft:mangrove_wood",
+    "minecraft:stripped_mangrove_log",
+    "minecraft:stripped_mangrove_wood"
+  ]
+}

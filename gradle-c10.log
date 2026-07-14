@@ -1,0 +1,413 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.12/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :createMinecraftArtifacts UP-TO-DATE
+
+> Task :compileJava
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\capabilities\Bulldozer.java:3: error: package com.moulberry.axiom.mixin does not exist
+import com.moulberry.axiom.mixin.MultiPlayerGameModeAccessor;
+                                ^
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\displayentity\DisplayEntityHelper.java:7: error: package com.moulberry.axiom.mixin does not exist
+import com.moulberry.axiom.mixin.DisplayAccessor;
+                                ^
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\mixinplugin\AxiomMixinPlugin.java:6: error: package com.moulberry.mixinconstraints does not exist
+import com.moulberry.mixinconstraints.MixinConstraints;
+                                     ^
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\mixinplugin\AxiomMixinPlugin.java:7: error: package com.moulberry.mixinconstraints.mixin does not exist
+import com.moulberry.mixinconstraints.mixin.MixinConstraintsBootstrap;
+                                           ^
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\annotations\ServerAnnotations.java:23: error: incompatible types: invalid method reference
+   private static final Factory<ServerAnnotations> FACTORY = new Factory(ServerAnnotations::new, ServerAnnotations::read, null);
+                                                                                                 ^
+    incompatible types: Object cannot be converted to CompoundTag
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\editor\palette\EditorPalette.java:428: error: incompatible types: Object cannot be converted to String
+         for (String key : (List)context.deserialize(
+                           ^
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\AxiomServer.java:42: error: cannot find symbol
+         MinecraftServer minecraftServer = event.getServer();
+         ^
+  symbol:   class MinecraftServer
+  location: class AxiomServer
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\collections\Position2ObjectMap.java:73: error: incompatible types: Object[] cannot be converted to T[]
+         consumer.accept(cx, cy, cz, (Object[])entry.getValue());
+                                     ^
+  where T is a type-variable:
+    T extends Object declared in class Position2ObjectMap
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\blueprint\BlueprintIo.java:356: error: incompatible types: Object cannot be converted to Tag
+         Tag encoded = VersionUtils.getOrThrow(blockStateCodec.encodeStart(NbtOps.INSTANCE, container));
+                                              ^
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\blueprint\BlueprintIo.java:379: error: cannot find symbol
+               blockEntitiesTag.add(tagx);
+                               ^
+  symbol:   method add(CompoundTag)
+  location: variable blockEntitiesTag of type ObjectIterator
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\blueprint\BlueprintIo.java:412: error: incompatible types: @org.jetbrains.annotations.NotNull NativeImage cannot be converted to NativeImageExt
+      byte[] var14 = ((NativeImageExt)thumbnail).axiom$asByteArray();
+                                      ^
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\capabilities\Bulldozer.java:37: error: cannot find symbol
+         int delay = ((MultiPlayerGameModeAccessor)gameMode).getDestroyDelay();
+                       ^
+  symbol:   class MultiPlayerGameModeAccessor
+  location: class Bulldozer
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\capabilities\Bulldozer.java:39: error: cannot find symbol
+         ((MultiPlayerGameModeAccessor)gameMode).setDestroyDelay(newDelay);
+           ^
+  symbol:   class MultiPlayerGameModeAccessor
+  location: class Bulldozer
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\capabilities\Bulldozer.java:59: error: cannot find symbol
+               ((MultiPlayerGameModeAccessor)gameMode).setDestroyDelay(0);
+                 ^
+  symbol:   class MultiPlayerGameModeAccessor
+  location: class Bulldozer
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\world_modification\BlockBuffer.java:151: error: incompatible types: Object cannot be converted to CompoundTag
+         CompoundTag encoded = VersionUtils.getOrThrow(codec.encodeStart(NbtOps.INSTANCE, (PalettedContainer)entry.getValue()));
+                                                      ^
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\custom_blocks\CustomBlockImplementation.java:122: error: incompatible types: ImmutableList<CustomBlockStateImplementation> cannot be converted to List<CustomBlockState>
+      return this.stateDefinition.getPossibleStates();
+                                                   ^
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\custom_blocks\CustomBlockStateImplementation.java:46: error: method setValue in class StateHolder<O,S> cannot be applied to given types;
+      return (CustomBlockState)this.setValue(property, value);
+                                   ^
+  required: Property<T#1>,V
+  found:    Property<T#2>,Comparable<CAP#1>
+  reason: inference variable T#1 has incompatible bounds
+    equality constraints: T#2
+    lower bounds: V,Comparable<CAP#1>
+  where T#1,V,S,T#2,O are type-variables:
+    T#1 extends Comparable<T#1> declared in method <T#1,V>setValue(Property<T#1>,V)
+    V extends T#1 declared in method <T#1,V>setValue(Property<T#1>,V)
+    S extends Object declared in class StateHolder
+    T#2 extends Comparable<T#2> declared in method <T#2>setPropertyUnsafe(Property<T#2>,Comparable<?>)
+    O extends Object declared in class StateHolder
+  where CAP#1 is a fresh type-variable:
+    CAP#1 extends Object from capture of ?
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\custom_blocks\ServerCustomBlocks.java:251: error: incompatible types: Enum cannot be converted to Direction
+               directionalProperties.put((Enum)value, property);
+                                         ^
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\custom_blocks\ServerCustomBlocks.java:345: error: incompatible types: Comparable<CAP#1> cannot be converted to T
+      stringBuilder.append(property.getName(comparable));
+                                            ^
+  where T is a type-variable:
+    T extends Comparable<T> declared in method <T>appendProperty(StringBuilder,Property<T>,Comparable<?>)
+  where CAP#1 is a fresh type-variable:
+    CAP#1 extends Object from capture of ?
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\displayentity\DisplayEntityHelper.java:235: error: cannot find symbol
+         (Integer)data.get(DisplayAccessor.getDataTransformationInterpolationDurationId()),
+                           ^
+  symbol:   variable DisplayAccessor
+  location: class DisplayEntityHelper
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\displayentity\DisplayEntityHelper.java:236: error: cannot find symbol
+         (Integer)data.get(DisplayAccessor.getDataPosRotInterpolationId()),
+                           ^
+  symbol:   variable DisplayAccessor
+  location: class DisplayEntityHelper
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\editor\EditorUI.java:1639: error: incompatible types: Window cannot be converted to WindowExt
+         ((WindowExt)window).axiom$resizeFramebuffer(window.getWindow(), width[0], height[0]);
+                     ^
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\editor\EditorUI.java:1644: error: incompatible types: Window cannot be converted to WindowExt
+         ((WindowExt)window).axiom$resize(window.getWindow(), width[0], height[0]);
+                     ^
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\editor\windows\save_world\SaveSchematicAction.java:94: error: incompatible types: HashMap<Object,Object> cannot be converted to Map<String,String>
+   private static final Map<String, String> REVERSE_BLOCK_ENTITY_ID_FIX_MAP = (Map<String, String>)DataFixUtils.make(Maps.newHashMap(), hashMap -> {
+                                                                                                                    ^
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\mask\DummyFunctionDictionary.java:12: error: cannot find symbol
+      return super.hasFunction(functionName);
+                  ^
+  symbol: method hasFunction(String)
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\mixinplugin\AxiomMixinPlugin.java:18: error: cannot find symbol
+      return this.mixinPackage != null && !mixinClassName.startsWith(this.mixinPackage) ? true : MixinConstraints.shouldApplyMixin(mixinClassName);
+                                                                                                 ^
+  symbol:   variable MixinConstraints
+  location: class AxiomMixinPlugin
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\mixinplugin\AxiomMixinPlugin.java:24: error: cannot find symbol
+      MixinConstraintsBootstrap.init(mixinPackage);
+      ^
+  symbol:   variable MixinConstraintsBootstrap
+  location: class AxiomMixinPlugin
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\neoforge\AxiomClientBusEvents.java:15: warning: [removal] bus() in EventBusSubscriber has been deprecated and marked for removal
+@EventBusSubscriber(modid = AxiomNeoForge.MOD_ID, value = Dist.CLIENT, bus = EventBusSubscriber.Bus.MOD)
+                                                                       ^
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\neoforge\AxiomClientBusEvents.java:15: warning: [removal] Bus in EventBusSubscriber has been deprecated and marked for removal
+@EventBusSubscriber(modid = AxiomNeoForge.MOD_ID, value = Dist.CLIENT, bus = EventBusSubscriber.Bus.MOD)
+                                                                                               ^
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\operations\RebuildOperation.java:25: error: cannot find symbol
+   private static final ObjectHeapPriorityQueue<RebuildOperation.QueueObject> queue = new ObjectHeapPriorityQueue(Comparator.comparingDouble(k -> k.priority));
+                                                                                                                                                   ^
+  symbol:   variable priority
+  location: variable k of type Object
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\packets\AxiomClientboundCustomBlocks.java:106: error: incompatible types: Object cannot be converted to Enum<?>
+                     for (Enum<?> possibleValue : possibleValues) {
+                                                  ^
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\screen\CreateDisplayEntityScreen.java:239: error: incompatible types: Builder<Object> cannot be converted to Builder<ItemDisplayContext>
+         .withInitialValue(this.itemDisplayContext);
+                          ^
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\screen\CreateDisplayEntityScreen.java:323: error: incompatible types: Comparable<CAP#1> cannot be converted to String
+            Builder<String> cycleButton = CycleButton.builder(CreateDisplayEntityScreen::stringToComponent).withInitialValue(propertyValue);
+                                                                                                                             ^
+  where CAP#1 is a fresh type-variable:
+    CAP#1 extends Object from capture of ?
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\screen\CreateDisplayEntityScreen.java:354: error: incompatible types: Comparable<CAP#1> cannot be converted to Boolean
+            Builder<Boolean> cycleButton = CycleButton.builder(CreateDisplayEntityScreen::booleanToComponent).withInitialValue(propertyValue);
+                                                                                                                               ^
+  where CAP#1 is a fresh type-variable:
+    CAP#1 extends Object from capture of ?
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\screen\EditDisplayEntityScreen.java:172: error: incompatible types: Builder<StringRepresentable> cannot be converted to Builder<GizmoMode>
+         .withInitialValue(DisplayEntityManipulator.gizmoMode);
+                          ^
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\tools\HeightmapApplier.java:130: error: cannot find symbol
+                  int modifiedHeight = newConstrainedHeights.get(x, z);
+                                                            ^
+  symbol:   method get(int,int)
+  location: variable newConstrainedHeights of type ObjectIterator
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\tools\HeightmapApplier.java:135: error: cannot find symbol
+                     int height1 = newConstrainedHeights.get(x + 1, z);
+                                                        ^
+  symbol:   method get(int,int)
+  location: variable newConstrainedHeights of type ObjectIterator
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\tools\HeightmapApplier.java:136: error: cannot find symbol
+                     int height2 = newConstrainedHeights.get(x - 1, z);
+                                                        ^
+  symbol:   method get(int,int)
+  location: variable newConstrainedHeights of type ObjectIterator
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\tools\HeightmapApplier.java:137: error: cannot find symbol
+                     int height3 = newConstrainedHeights.get(x, z + 1);
+                                                        ^
+  symbol:   method get(int,int)
+  location: variable newConstrainedHeights of type ObjectIterator
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\tools\HeightmapApplier.java:138: error: cannot find symbol
+                     int height4 = newConstrainedHeights.get(x, z - 1);
+                                                        ^
+  symbol:   method get(int,int)
+  location: variable newConstrainedHeights of type ObjectIterator
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\tools\HeightmapApplier.java:150: error: cannot find symbol
+                        newConstrainedHeights.put(x, z, constrainedHeight);
+                                             ^
+  symbol:   method put(int,int,int)
+  location: variable newConstrainedHeights of type ObjectIterator
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\tools\path\PathTool.java:596: error: cannot find symbol
+                           targetRegion.addBlockWithoutDirty(xx, yx, zx, blockState);
+                                                                         ^
+  symbol:   variable blockState
+  location: class PathTool
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\tools\slope\SlopeTool.java:296: error: incompatible types: int[] cannot be converted to int
+                  Rasterization3D.ddaSkipFrom(this.lastPosition, newPosition, (x, y, zx) -> this.apply(level, radius, height, mutableBlockPos, x, y, zx));
+                                                                                                              ^
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\tools\stamp\StampTool.java:542: error: package result does not exist
+                        return result.spacingBlacklistSet.contains(placementx.baseX(), placementx.baseZ());
+                                     ^
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\utils\RegionHelper.java:673: error: incompatible types: Object cannot be converted to NbtTarget
+                     for (RegionHelper.NbtTarget target : (List)element.getValue()) {
+                                                          ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+43 errors
+2 warnings
+
+> Task :compileJava FAILED
+
+[Incubating] Problems report is available at: file:///E:/Projects/Axiom-port/axiom-neoforge/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler output below.
+  Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full outputNote: Recompile with -Xlint:deprecation for details.E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\capabilities\Bulldozer.java:3: error: package com.moulberry.axiom.mixin does not exist
+  import com.moulberry.axiom.mixin.MultiPlayerGameModeAccessor;
+                                  ^
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\displayentity\DisplayEntityHelper.java:7: error: package com.moulberry.axiom.mixin does not exist
+  import com.moulberry.axiom.mixin.DisplayAccessor;
+                                  ^
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\mixinplugin\AxiomMixinPlugin.java:6: error: package com.moulberry.mixinconstraints does not exist
+  import com.moulberry.mixinconstraints.MixinConstraints;
+                                       ^
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\mixinplugin\AxiomMixinPlugin.java:7: error: package com.moulberry.mixinconstraints.mixin does not exist
+  import com.moulberry.mixinconstraints.mixin.MixinConstraintsBootstrap;
+                                             ^
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\tools\stamp\StampTool.java:542: error: package result does not exist
+                          return result.spacingBlacklistSet.contains(placementx.baseX(), placementx.baseZ());
+                                       ^E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\custom_blocks\CustomBlockStateImplementation.java:46: error: method setValue in class StateHolder<O,S> cannot be applied to given types;
+        return (CustomBlockState)this.setValue(property, value);
+                                     ^
+    required: Property<T#1>,V
+    found:    Property<T#2>,Comparable<CAP#1>
+    reason: inference variable T#1 has incompatible bounds
+      equality constraints: T#2
+      lower bounds: V,Comparable<CAP#1>
+    where T#1,V,S,T#2,O are type-variables:
+      T#1 extends Comparable<T#1> declared in method <T#1,V>setValue(Property<T#1>,V)
+      V extends T#1 declared in method <T#1,V>setValue(Property<T#1>,V)
+      S extends Object declared in class StateHolder
+      T#2 extends Comparable<T#2> declared in method <T#2>setPropertyUnsafe(Property<T#2>,Comparable<?>)
+      O extends Object declared in class StateHolder
+    where CAP#1 is a fresh type-variable:
+      CAP#1 extends Object from capture of ?Note: Recompile with -Xlint:unchecked for details.E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\AxiomServer.java:42: error: cannot find symbol
+           MinecraftServer minecraftServer = event.getServer();
+           ^
+    symbol:   class MinecraftServer
+    location: class AxiomServer
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\capabilities\Bulldozer.java:37: error: cannot find symbol
+           int delay = ((MultiPlayerGameModeAccessor)gameMode).getDestroyDelay();
+                         ^
+    symbol:   class MultiPlayerGameModeAccessor
+    location: class Bulldozer
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\capabilities\Bulldozer.java:39: error: cannot find symbol
+           ((MultiPlayerGameModeAccessor)gameMode).setDestroyDelay(newDelay);
+             ^
+    symbol:   class MultiPlayerGameModeAccessor
+    location: class Bulldozer
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\capabilities\Bulldozer.java:59: error: cannot find symbol
+                 ((MultiPlayerGameModeAccessor)gameMode).setDestroyDelay(0);
+                   ^
+    symbol:   class MultiPlayerGameModeAccessor
+    location: class Bulldozer
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\displayentity\DisplayEntityHelper.java:235: error: cannot find symbol
+           (Integer)data.get(DisplayAccessor.getDataTransformationInterpolationDurationId()),
+                             ^
+    symbol:   variable DisplayAccessor
+    location: class DisplayEntityHelper
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\displayentity\DisplayEntityHelper.java:236: error: cannot find symbol
+           (Integer)data.get(DisplayAccessor.getDataPosRotInterpolationId()),
+                             ^
+    symbol:   variable DisplayAccessor
+    location: class DisplayEntityHelper
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\mixinplugin\AxiomMixinPlugin.java:18: error: cannot find symbol
+        return this.mixinPackage != null && !mixinClassName.startsWith(this.mixinPackage) ? true : MixinConstraints.shouldApplyMixin(mixinClassName);
+                                                                                                   ^
+    symbol:   variable MixinConstraints
+    location: class AxiomMixinPlugin
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\mixinplugin\AxiomMixinPlugin.java:24: error: cannot find symbol
+        MixinConstraintsBootstrap.init(mixinPackage);
+        ^
+    symbol:   variable MixinConstraintsBootstrap
+    location: class AxiomMixinPlugin
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\operations\RebuildOperation.java:25: error: cannot find symbol
+     private static final ObjectHeapPriorityQueue<RebuildOperation.QueueObject> queue = new ObjectHeapPriorityQueue(Comparator.comparingDouble(k -> k.priority));
+                                                                                                                                                     ^
+    symbol:   variable priority
+    location: variable k of type Object
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\tools\path\PathTool.java:596: error: cannot find symbol
+                             targetRegion.addBlockWithoutDirty(xx, yx, zx, blockState);
+                                                                           ^
+    symbol:   variable blockState
+    location: class PathToolNote: Some input files use unchecked or unsafe operations.E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\blueprint\BlueprintIo.java:379: error: cannot find symbol
+                 blockEntitiesTag.add(tagx);
+                                 ^
+    symbol:   method add(CompoundTag)
+    location: variable blockEntitiesTag of type ObjectIterator
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\tools\HeightmapApplier.java:130: error: cannot find symbol
+                    int modifiedHeight = newConstrainedHeights.get(x, z);
+                                                              ^
+    symbol:   method get(int,int)
+    location: variable newConstrainedHeights of type ObjectIterator
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\tools\HeightmapApplier.java:135: error: cannot find symbol
+                       int height1 = newConstrainedHeights.get(x + 1, z);
+                                                          ^
+    symbol:   method get(int,int)
+    location: variable newConstrainedHeights of type ObjectIterator
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\tools\HeightmapApplier.java:136: error: cannot find symbol
+                       int height2 = newConstrainedHeights.get(x - 1, z);
+                                                          ^
+    symbol:   method get(int,int)
+    location: variable newConstrainedHeights of type ObjectIterator
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\tools\HeightmapApplier.java:137: error: cannot find symbol
+                       int height3 = newConstrainedHeights.get(x, z + 1);
+                                                          ^
+    symbol:   method get(int,int)
+    location: variable newConstrainedHeights of type ObjectIterator
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\tools\HeightmapApplier.java:138: error: cannot find symbol
+                       int height4 = newConstrainedHeights.get(x, z - 1);
+                                                          ^
+    symbol:   method get(int,int)
+    location: variable newConstrainedHeights of type ObjectIterator
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\tools\HeightmapApplier.java:150: error: cannot find symbol
+                          newConstrainedHeights.put(x, z, constrainedHeight);
+                                               ^
+    symbol:   method put(int,int,int)
+    location: variable newConstrainedHeights of type ObjectIteratorE:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\annotations\ServerAnnotations.java:23: error: incompatible types: invalid method reference
+     private static final Factory<ServerAnnotations> FACTORY = new Factory(ServerAnnotations::new, ServerAnnotations::read, null);
+                                                                                                   ^
+      incompatible types: Object cannot be converted to CompoundTag
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\editor\palette\EditorPalette.java:428: error: incompatible types: Object cannot be converted to String
+           for (String key : (List)context.deserialize(
+                             ^
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\collections\Position2ObjectMap.java:73: error: incompatible types: Object[] cannot be converted to T[]
+           consumer.accept(cx, cy, cz, (Object[])entry.getValue());
+                                       ^
+    where T is a type-variable:
+      T extends Object declared in class Position2ObjectMap
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\blueprint\BlueprintIo.java:356: error: incompatible types: Object cannot be converted to Tag
+           Tag encoded = VersionUtils.getOrThrow(blockStateCodec.encodeStart(NbtOps.INSTANCE, container));
+                                                ^
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\blueprint\BlueprintIo.java:412: error: incompatible types: @org.jetbrains.annotations.NotNull NativeImage cannot be converted to NativeImageExt
+        byte[] var14 = ((NativeImageExt)thumbnail).axiom$asByteArray();
+                                        ^
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\world_modification\BlockBuffer.java:151: error: incompatible types: Object cannot be converted to CompoundTag
+           CompoundTag encoded = VersionUtils.getOrThrow(codec.encodeStart(NbtOps.INSTANCE, (PalettedContainer)entry.getValue()));
+                                                        ^
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\custom_blocks\CustomBlockImplementation.java:122: error: incompatible types: ImmutableList<CustomBlockStateImplementation> cannot be converted to List<CustomBlockState>
+        return this.stateDefinition.getPossibleStates();
+                                                     ^
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\custom_blocks\ServerCustomBlocks.java:251: error: incompatible types: Enum cannot be converted to Direction
+                 directionalProperties.put((Enum)value, property);
+                                           ^
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\custom_blocks\ServerCustomBlocks.java:345: error: incompatible types: Comparable<CAP#1> cannot be converted to T
+        stringBuilder.append(property.getName(comparable));
+                                              ^
+    where T is a type-variable:
+      T extends Comparable<T> declared in method <T>appendProperty(StringBuilder,Property<T>,Comparable<?>)
+    where CAP#1 is a fresh type-variable:
+      CAP#1 extends Object from capture of ?
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\editor\EditorUI.java:1639: error: incompatible types: Window cannot be converted to WindowExt
+           ((WindowExt)window).axiom$resizeFramebuffer(window.getWindow(), width[0], height[0]);
+                       ^
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\editor\EditorUI.java:1644: error: incompatible types: Window cannot be converted to WindowExt
+           ((WindowExt)window).axiom$resize(window.getWindow(), width[0], height[0]);
+                       ^
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\editor\windows\save_world\SaveSchematicAction.java:94: error: incompatible types: HashMap<Object,Object> cannot be converted to Map<String,String>
+     private static final Map<String, String> REVERSE_BLOCK_ENTITY_ID_FIX_MAP = (Map<String, String>)DataFixUtils.make(Maps.newHashMap(), hashMap -> {
+                                                                                                                      ^
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\packets\AxiomClientboundCustomBlocks.java:106: error: incompatible types: Object cannot be converted to Enum<?>
+                       for (Enum<?> possibleValue : possibleValues) {
+                                                    ^
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\screen\CreateDisplayEntityScreen.java:239: error: incompatible types: Builder<Object> cannot be converted to Builder<ItemDisplayContext>
+           .withInitialValue(this.itemDisplayContext);
+                            ^
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\screen\CreateDisplayEntityScreen.java:323: error: incompatible types: Comparable<CAP#1> cannot be converted to String
+              Builder<String> cycleButton = CycleButton.builder(CreateDisplayEntityScreen::stringToComponent).withInitialValue(propertyValue);
+                                                                                                                               ^
+    where CAP#1 is a fresh type-variable:
+      CAP#1 extends Object from capture of ?
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\screen\CreateDisplayEntityScreen.java:354: error: incompatible types: Comparable<CAP#1> cannot be converted to Boolean
+              Builder<Boolean> cycleButton = CycleButton.builder(CreateDisplayEntityScreen::booleanToComponent).withInitialValue(propertyValue);
+                                                                                                                                 ^
+    where CAP#1 is a fresh type-variable:
+      CAP#1 extends Object from capture of ?
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\screen\EditDisplayEntityScreen.java:172: error: incompatible types: Builder<StringRepresentable> cannot be converted to Builder<GizmoMode>
+           .withInitialValue(DisplayEntityManipulator.gizmoMode);
+                            ^
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\tools\slope\SlopeTool.java:296: error: incompatible types: int[] cannot be converted to int
+                    Rasterization3D.ddaSkipFrom(this.lastPosition, newPosition, (x, y, zx) -> this.apply(level, radius, height, mutableBlockPos, x, y, zx));
+                                                                                                                ^
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\utils\RegionHelper.java:673: error: incompatible types: Object cannot be converted to NbtTarget
+                       for (RegionHelper.NbtTarget target : (List)element.getValue()) {
+                                                            ^E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\neoforge\AxiomClientBusEvents.java:15: warning: [removal] bus() in EventBusSubscriber has been deprecated and marked for removal
+  @EventBusSubscriber(modid = AxiomNeoForge.MOD_ID, value = Dist.CLIENT, bus = EventBusSubscriber.Bus.MOD)
+                                                                         ^
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\neoforge\AxiomClientBusEvents.java:15: warning: [removal] Bus in EventBusSubscriber has been deprecated and marked for removal
+  @EventBusSubscriber(modid = AxiomNeoForge.MOD_ID, value = Dist.CLIENT, bus = EventBusSubscriber.Bus.MOD)
+                                                                                                 ^E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\mask\DummyFunctionDictionary.java:12: error: cannot find symbol
+        return super.hasFunction(functionName);
+                    ^
+    symbol: method hasFunction(String)Note: Some input files use or override a deprecated API.
+  43 errors
+  2 warnings
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights.
+
+BUILD FAILED in 15s
+2 actionable tasks: 1 executed, 1 up-to-date

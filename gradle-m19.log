@@ -1,0 +1,21 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.12/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :createMinecraftArtifacts UP-TO-DATE
+
+> Task :compileJava
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\neoforge\AxiomClientBusEvents.java:15: warning: [removal] bus() in EventBusSubscriber has been deprecated and marked for removal
+@EventBusSubscriber(modid = AxiomNeoForge.MOD_ID, value = Dist.CLIENT, bus = EventBusSubscriber.Bus.MOD)
+                                                                       ^
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\neoforge\AxiomClientBusEvents.java:15: warning: [removal] Bus in EventBusSubscriber has been deprecated and marked for removal
+@EventBusSubscriber(modid = AxiomNeoForge.MOD_ID, value = Dist.CLIENT, bus = EventBusSubscriber.Bus.MOD)
+                                                                                               ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+2 warnings
+
+[Incubating] Problems report is available at: file:///E:/Projects/Axiom-port/axiom-neoforge/build/reports/problems/problems-report.html
+
+BUILD SUCCESSFUL in 28s
+2 actionable tasks: 1 executed, 1 up-to-date

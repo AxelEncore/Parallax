@@ -1,0 +1,12 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.12/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :createMinecraftArtifacts UP-TO-DATE
+
+> Task :compileJava
+Note: E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\utils\Authorization.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+[Incubating] Problems report is available at: file:///E:/Projects/Axiom-port/axiom-neoforge/build/reports/problems/problems-report.html
+
+BUILD SUCCESSFUL in 33s
+2 actionable tasks: 1 executed, 1 up-to-date

@@ -1,0 +1,33 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.12/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :createMinecraftArtifacts UP-TO-DATE
+
+> Task :compileJava FAILED
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\editor\windows\clipboard\BlueprintBrowserWindow.java:1364: error: illegal start of expression
+         String countText = NumberFormat.getInstance(.format((long)directory.blueprintDirectory.blueprints().size())
+                                                     ^
+E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\editor\windows\clipboard\BlueprintBrowserWindow.java:1364: error: ';' expected
+         String countText = NumberFormat.getInstance(.format((long)directory.blueprintDirectory.blueprints().size())
+                                                                                                                    ^
+2 errors
+
+[Incubating] Problems report is available at: file:///E:/Projects/Axiom-port/axiom-neoforge/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler output below.
+  E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\editor\windows\clipboard\BlueprintBrowserWindow.java:1364: error: ';' expected
+           String countText = NumberFormat.getInstance(.format((long)directory.blueprintDirectory.blueprints().size())
+                                                                                                                      ^E:\Projects\Axiom-port\axiom-neoforge\src\main\java\com\moulberry\axiom\editor\windows\clipboard\BlueprintBrowserWindow.java:1364: error: illegal start of expression
+           String countText = NumberFormat.getInstance(.format((long)directory.blueprintDirectory.blueprints().size())
+                                                       ^
+  2 errors
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights.
+
+BUILD FAILED in 8s
+2 actionable tasks: 1 executed, 1 up-to-date

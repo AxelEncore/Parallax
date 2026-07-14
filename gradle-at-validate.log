@@ -1,0 +1,55 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.12/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Task :createMinecraftArtifacts
+Loaded 145 artifacts from E:\Projects\Axiom-port\axiom-neoforge\build\tmp\createMinecraftArtifacts\nfrt_artifact_manifest.properties
+[1m*** Started working on [4mdownloadJson[0m[0m
+ [1m[92mDONE [0m Completed [4mdownloadJson[0m in 0.02s
+[1m*** Started working on [4mdownloadClient[0m[0m
+[1m*** Started working on [4mdownloadServer[0m[0m
+[1m*** Started working on [4mdownloadClientMappings[0m[0m
+ [1m[92mDONE [0m Completed [4mdownloadClient[0m in 0.02s
+ [1m[92mDONE [0m Completed [4mdownloadServer[0m in 0.02s
+ [1m[92mDONE [0m Completed [4mdownloadClientMappings[0m in 0.02s
+[1m*** Started working on [4mmergeMappings[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mmergeMappings[0m in 0.00s
+[1m*** Started working on [4mstripClient[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mstripClient[0m in 0.00s
+[1m*** Started working on [4mextractServer[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mextractServer[0m in 0.00s
+[1m*** Started working on [4mstripServer[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mstripServer[0m in 0.00s
+[1m*** Started working on [4mmerge[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mmerge[0m in 0.00s
+[1m*** Started working on [4mrename[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mrename[0m in 0.00s
+[1m*** Started working on [4mdecompile[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mdecompile[0m in 0.00s
+[1m*** Started working on [4minject[0m[0m
+ [1m[92mREUSE[0m Used cache of [4minject[0m in 0.00s
+[1m*** Started working on [4mpatch[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mpatch[0m in 0.00s
+[1m*** Started working on [4mapplyNeoforgePatches[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mapplyNeoforgePatches[0m in 0.00s
+[1m*** Started working on [4mtransformSources[0m[0m
+ RUN   Running external tool net.neoforged.jst:jst-cli-bundle:2.0.6
+ [1m[92mDONE [0m Completed [4mtransformSources[0m in 5.55s
+[1m*** Started working on [4mrecompile[0m[0m
+ 110 items on the compile classpath
+ 0 items on the sourcepath
+[1m*** Started working on [4msourcesWithNeoForge[0m[0m
+ Compiling 5364 source files
+ [1m[92mDONE [0m Completed [4msourcesWithNeoForge[0m in 4.79s
+Copied 0 resource files
+ [1m[92mDONE [0m Completed [4mrecompile[0m in 26.42s
+[1m*** Started working on [4mcompiledWithNeoForge[0m[0m
+ [1m[92mDONE [0m Completed [4mcompiledWithNeoForge[0m in 5.88s
+[1m*** Started working on [4msourcesAndCompiledWithNeoForge[0m[0m
+ [1m[92mDONE [0m Completed [4msourcesAndCompiledWithNeoForge[0m in 2.13s
+Total runtime: 40.98s
+
+
+> Task :compileJava UP-TO-DATE
+
+BUILD SUCCESSFUL in 49s
+2 actionable tasks: 1 executed, 1 up-to-date

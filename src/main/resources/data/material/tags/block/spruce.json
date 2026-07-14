@@ -1,0 +1,21 @@
+{
+  "values": [
+    "minecraft:spruce_planks",
+    "minecraft:spruce_pressure_plate",
+    "minecraft:spruce_trapdoor",
+    "minecraft:spruce_stairs",
+    "minecraft:spruce_slab",
+    "minecraft:spruce_fence",
+    "minecraft:spruce_door",
+    "minecraft:spruce_fence_gate",
+    "minecraft:spruce_button",
+    "minecraft:spruce_sign",
+    "minecraft:spruce_wall_sign",
+    "minecraft:spruce_hanging_sign",
+    "minecraft:spruce_wall_hanging_sign",
+    "minecraft:spruce_log",
+    "minecraft:spruce_wood",
+    "minecraft:stripped_spruce_log",
+    "minecraft:stripped_spruce_wood"
+  ]
+}

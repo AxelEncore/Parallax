@@ -1,0 +1,21 @@
+{
+  "values": [
+    "minecraft:cherry_planks",
+    "minecraft:cherry_pressure_plate",
+    "minecraft:cherry_trapdoor",
+    "minecraft:cherry_stairs",
+    "minecraft:cherry_slab",
+    "minecraft:cherry_fence",
+    "minecraft:cherry_door",
+    "minecraft:cherry_fence_gate",
+    "minecraft:cherry_button",
+    "minecraft:cherry_sign",
+    "minecraft:cherry_wall_sign",
+    "minecraft:cherry_hanging_sign",
+    "minecraft:cherry_wall_hanging_sign",
+    "minecraft:cherry_log",
+    "minecraft:cherry_wood",
+    "minecraft:stripped_cherry_log",
+    "minecraft:stripped_cherry_wood"
+  ]
+}

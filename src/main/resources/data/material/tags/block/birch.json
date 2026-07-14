@@ -1,0 +1,21 @@
+{
+  "values": [
+    "minecraft:birch_planks",
+    "minecraft:birch_pressure_plate",
+    "minecraft:birch_trapdoor",
+    "minecraft:birch_stairs",
+    "minecraft:birch_slab",
+    "minecraft:birch_fence",
+    "minecraft:birch_door",
+    "minecraft:birch_fence_gate",
+    "minecraft:birch_button",
+    "minecraft:birch_sign",
+    "minecraft:birch_wall_sign",
+    "minecraft:birch_hanging_sign",
+    "minecraft:birch_wall_hanging_sign",
+    "minecraft:birch_log",
+    "minecraft:birch_wood",
+    "minecraft:stripped_birch_log",
+    "minecraft:stripped_birch_wood"
+  ]
+}

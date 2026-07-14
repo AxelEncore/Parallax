@@ -1,0 +1,70 @@
+Downloading https://services.gradle.org/distributions/gradle-8.12-bin.zip
+.............10%.............20%.............30%.............40%.............50%.............60%.............70%.............80%.............90%.............100%
+
+Welcome to Gradle 8.12!
+
+Here are the highlights of this release:
+ - Enhanced error and warning reporting with the Problems API
+ - File-system watching support on Alpine Linux
+ - Build and test Swift 6 libraries and apps
+
+For more details see https://docs.gradle.org/8.12/release-notes.html
+
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.12/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Task :createMinecraftArtifacts
+Performing periodic cache maintenance on C:\Users\Axel\.gradle\caches\neoformruntime
+Cleaning intermediate results cache in C:\Users\Axel\.gradle\caches\neoformruntime\intermediate_results
+ Maximum age: 744h
+ Maximum cache size: 10 GiB
+ [0;2;3m150 files found[0m
+ [0;2;3m980 MiB overall size[0m
+ [0;2;3m0 expired keys found[0m
+[0;2;3m Deleted 19 outdated lock files
+Loaded 145 artifacts from E:\Projects\Axiom-port\axiom-neoforge\build\tmp\createMinecraftArtifacts\nfrt_artifact_manifest.properties
+[1m*** Started working on [4mdownloadJson[0m[0m
+ [1m[92mDONE [0m Completed [4mdownloadJson[0m in 0.02s
+[1m*** Started working on [4mdownloadServer[0m[0m
+[1m*** Started working on [4mdownloadClient[0m[0m
+[1m*** Started working on [4mdownloadClientMappings[0m[0m
+ [1m[92mDONE [0m Completed [4mdownloadServer[0m in 0.02s
+ [1m[92mDONE [0m Completed [4mdownloadClientMappings[0m in 0.02s
+ [1m[92mDONE [0m Completed [4mdownloadClient[0m in 0.02s
+[1m*** Started working on [4mmergeMappings[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mmergeMappings[0m in 0.00s
+[1m*** Started working on [4mstripClient[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mstripClient[0m in 0.00s
+[1m*** Started working on [4mextractServer[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mextractServer[0m in 0.00s
+[1m*** Started working on [4mstripServer[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mstripServer[0m in 0.00s
+[1m*** Started working on [4mmerge[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mmerge[0m in 0.00s
+[1m*** Started working on [4mrename[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mrename[0m in 0.00s
+[1m*** Started working on [4mdecompile[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mdecompile[0m in 0.00s
+[1m*** Started working on [4minject[0m[0m
+ [1m[92mREUSE[0m Used cache of [4minject[0m in 0.00s
+[1m*** Started working on [4mpatch[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mpatch[0m in 0.00s
+[1m*** Started working on [4mapplyNeoforgePatches[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mapplyNeoforgePatches[0m in 0.00s
+[1m*** Started working on [4mtransformSources[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mtransformSources[0m in 0.00s
+[1m*** Started working on [4mrecompile[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mrecompile[0m in 0.00s
+[1m*** Started working on [4msourcesWithNeoForge[0m[0m
+ [1m[92mREUSE[0m Used cache of [4msourcesWithNeoForge[0m in 0.00s
+[1m*** Started working on [4mcompiledWithNeoForge[0m[0m
+ [1m[92mREUSE[0m Used cache of [4mcompiledWithNeoForge[0m in 0.00s
+[1m*** Started working on [4msourcesAndCompiledWithNeoForge[0m[0m
+ [1m[92mREUSE[0m Used cache of [4msourcesAndCompiledWithNeoForge[0m in 0.00s
+Total runtime: 1.81s
+
+
+> Task :compileJava
+
+BUILD SUCCESSFUL in 1m 31s
+2 actionable tasks: 2 executed

@@ -1,0 +1,35 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "CC0-1.0"
+issueTrackerURL = "https://github.com/moulberry/axiom"
+logoFile = "parallax.png"
+
+[[accessTransformers]]
+file = "META-INF/accesstransformer.cfg"
+
+[[mixins]]
+config = "axiom.mixins.json"
+
+[[mixins]]
+config = "axiom-lattice.mixins.json"
+
+[[mods]]
+modId = "axiom"
+version = "5.4.2"
+displayName = "Parallax"
+authors = "Moulberry (original Fabric mod); NeoForge port"
+description = '''Just Axiom NeoForge port'''
+
+[[dependencies.axiom]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1.220,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.axiom]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.21.2)"
+ordering = "NONE"
+side = "BOTH"

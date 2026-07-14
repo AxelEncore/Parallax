@@ -1,0 +1,19 @@
+{
+  "textures": {
+    "0": "axiom:block/moving_piston"
+  },
+  "elements": [
+    {
+      "from": [ 3, 3, 3 ],
+      "to": [ 13, 13, 13 ],
+      "faces": {
+        "down":  { "texture": "#0" },
+        "up":    { "texture": "#0" },
+        "north": { "texture": "#0" },
+        "south": { "texture": "#0" },
+        "west":  { "texture": "#0" },
+        "east":  { "texture": "#0" }
+      }
+    }
+  ]
+}

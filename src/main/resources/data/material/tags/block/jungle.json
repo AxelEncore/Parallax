@@ -1,0 +1,21 @@
+{
+  "values": [
+    "minecraft:jungle_planks",
+    "minecraft:jungle_pressure_plate",
+    "minecraft:jungle_trapdoor",
+    "minecraft:jungle_stairs",
+    "minecraft:jungle_slab",
+    "minecraft:jungle_fence",
+    "minecraft:jungle_door",
+    "minecraft:jungle_fence_gate",
+    "minecraft:jungle_button",
+    "minecraft:jungle_sign",
+    "minecraft:jungle_wall_sign",
+    "minecraft:jungle_hanging_sign",
+    "minecraft:jungle_wall_hanging_sign",
+    "minecraft:jungle_log",
+    "minecraft:jungle_wood",
+    "minecraft:stripped_jungle_log",
+    "minecraft:stripped_jungle_wood"
+  ]
+}

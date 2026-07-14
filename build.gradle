@@ -1,0 +1,141 @@
+plugins {
+    id 'net.neoforged.moddev' version '2.0.141'
+}
+
+version = project.mod_version
+group = project.mod_group_id
+
+base {
+    // Output jar name (parallax-5.4.2.jar). Independent of modId, which stays "axiom" for protocol/asset compat.
+    archivesName = 'parallax'
+}
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(21)
+}
+
+sourceSets {
+    main {
+        java {
+            // Ported incrementally (bulk-translation strategy). Mixins need @At/@Shadow porting +
+            // mixin config. Only the two Fabric datagen *providers* are excluded — the rest of the
+            // datagen package is plain data/logic used at runtime (e.g. MaterialBlockTagGenerator).
+            // Sodium 0.6+ (net.caffeinemc) render-compat mixin IS enabled (Sodium provided compileOnly).
+            // The remaining compat mixins target mods out of scope (cmdkeybind, resolutioncontrol) or the
+            // pre-0.7 me.jellysquid Sodium package, so they stay excluded.
+            exclude 'com/moulberry/axiom/mixin/compat/MixinBaseMacro.java'
+            exclude 'com/moulberry/axiom/mixin/compat/MixinResolutionControlMinecraft.java'
+            exclude 'com/moulberry/axiom/mixin/compat/MixinOldSodiumRegionChunkRenderer.java'
+            // Fabric fluid-render API (FluidRenderHandlerRegistry) — needs a NeoForge fluid-render port.
+            exclude 'com/moulberry/axiom/mixin/fluid_opacity/**'
+            exclude 'com/moulberry/axiom/datagen/BlockTagGenerator.java'
+            exclude 'com/moulberry/axiom/datagen/DataGeneration.java'
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'NeoForged'
+        url = 'https://maven.neoforged.net/releases'
+    }
+}
+
+neoForge {
+    version = project.neo_version
+
+    // Access transformer is auto-detected at META-INF/accesstransformer.cfg once populated.
+    // Mixin configs are registered per-phase as they are ported.
+
+    runs {
+        client {
+            client()
+            gameDirectory = file('run')
+        }
+        server {
+            server()
+            gameDirectory = file('run-server')
+        }
+    }
+
+    mods {
+        "${project.mod_id}" {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+dependencies {
+    // Third-party libraries the original mod shades in, repackaged verbatim from the 5.4.2 jar to
+    // preserve exact behavior (auth0 java-jwt, LuaJ + BCEL, JNoise, Configurate + Typesafe HOCON,
+    // Jackson, Caffeine, zstd-jni, JHLabs filters, EvalEx, quickhull3d, GeAnTyRef, java-image-scaling).
+    // NeoForge already provides slf4j / gson / guava / lwjgl, so those are excluded from the bundle.
+    // The custom imgui-java fork (imgui.moulberry92) and Lattice are handled in their own phases.
+    compileOnly files('libs/axiom-embedded-libs.jar')
+
+    // Config UI framework (Moulberry's Lattice) + the custom imgui-java fork are not on public Maven.
+    // Lattice is remapped intermediary->mojmap (same pipeline as the mod); imgui is bundled in
+    // axiom-embedded-libs. Lattice's own config-screen mixins are left unregistered for now (that
+    // mod-list screen is peripheral; the in-game config is the ImGui EditorUI).
+    compileOnly files('libs/lattice-mojmap.jar')
+
+    // Axiom's public extension API (custom tools/regions), remapped intermediary->mojmap.
+    compileOnly files('libs/axiomclientapi-mojmap.jar')
+
+    // Sodium 0.8.x (net.caffeinemc) for the render-compat mixin (MixinSodiumRegionChunkRenderer).
+    // compileOnly and NOT shaded — the user's Sodium mod provides these classes at runtime. The mixin
+    // is gated by @IfModLoaded("sodium") via AxiomMixinPlugin, so it is skipped (and never class-loaded)
+    // when Sodium is absent, avoiding any NoClassDefFoundError on vanilla/no-Sodium setups.
+    compileOnly files('libs/sodium-0.8.12.jar')
+}
+
+// The bundled libs are compileOnly; for the dev runtime we unpack them into the mod's own class
+// output so they're visible to the Mixin transformer (in production they're shaded into the jar).
+def unpackBundledLibs = tasks.register('unpackBundledLibs', Copy) {
+    from(zipTree('libs/axiom-embedded-libs.jar'))
+    from(zipTree('libs/lattice-mojmap.jar'))
+    from(zipTree('libs/axiomclientapi-mojmap.jar'))
+    into(layout.buildDirectory.dir('bundledLibs'))
+    exclude 'fabric.mod.json', '*.mixins.json', 'META-INF/MANIFEST.MF'
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+sourceSets.main.output.dir(unpackBundledLibs)
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 21
+    options.compilerArgs += ['-Xmaxerrs', '100000', '-Xmaxwarns', '0']
+}
+
+// Shade the embedded third-party libraries into the final mod jar (mirrors the original fat jar).
+tasks.named('jar').configure {
+    from(zipTree('libs/axiom-embedded-libs.jar'))
+    from(zipTree('libs/lattice-mojmap.jar')) {
+        // Drop Fabric metadata / Lattice's own mixin configs from the shaded output.
+        exclude 'fabric.mod.json', 'META-INF/MANIFEST.MF', '*.mixins.json'
+    }
+    from(zipTree('libs/axiomclientapi-mojmap.jar')) {
+        exclude 'fabric.mod.json', 'META-INF/MANIFEST.MF'
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+tasks.named('processResources').configure {
+    def expandProps = [
+            minecraft_version      : project.minecraft_version,
+            minecraft_version_range: project.minecraft_version_range,
+            neo_version            : project.neo_version,
+            neo_version_range      : project.neo_version_range,
+            loader_version_range   : project.loader_version_range,
+            mod_id                 : project.mod_id,
+            mod_name               : project.mod_name,
+            mod_license            : project.mod_license,
+            mod_version            : project.mod_version,
+            mod_authors            : project.mod_authors,
+    ]
+    inputs.properties(expandProps)
+    filesMatching(['META-INF/neoforge.mods.toml']) {
+        expand expandProps
+    }
+}
